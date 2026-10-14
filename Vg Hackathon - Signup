@@ -1,0 +1,72 @@
+
+flowchart TD
+    A["Welcome to LARP<br/>Your UCL journey starts here"]
+    B{"Where are you in<br/>your UCL journey?"}
+
+    A --> B
+    B --> C["Incoming Student"]
+    B --> D["Current Student"]
+    B --> E["UCL Alumni"]
+
+    C --> F["Create Account<br/>Email verification"]
+    D --> F
+    E --> F
+
+    F --> G{"How would you like<br/>to build your profile?"}
+
+    G --> H["Connect Portico<br/>Future UCL-approved integration"]
+    G --> I["Upload Personal Statement / CV"]
+    G --> J["Build Profile Manually"]
+
+    H --> K["Student Authorises<br/>Specific Data Access"]
+    K --> L["Import Approved Data"]
+    I --> M["Claude Analyses Documents"]
+    L --> M
+    J --> N["Enter Background,<br/>Interests and Goals"]
+
+    M --> O["LARP Passport<br/>AI-Generated Draft Profile"]
+    N --> O
+
+    O --> P["Review, Edit and<br/>Approve Profile"]
+    P --> Q{"What do you want<br/>from your UCL journey?"}
+
+    Q --> R["Career Growth"]
+    Q --> S["Meet New People"]
+    Q --> T["Explore University Life"]
+    Q --> U["Discover My Direction"]
+
+    R --> V["Claude Personalises<br/>Your LARP Journey"]
+    S --> V
+    T --> V
+    U --> V
+
+    V --> W["Your Personalised<br/>LARP Dashboard"]
+
+    W --> X["People<br/>Students and Alumni"]
+    W --> Y["Opportunities<br/>Jobs and Projects"]
+    W --> Z["University Life<br/>Events and Societies"]
+    W --> AA["My Path<br/>Goals and Progress"]
+
+    X --> AB["Connect and Collaborate"]
+    Y --> AC["Apply and Participate"]
+    Z --> AD["Attend and Explore"]
+    AA --> AE["Track and Update Goals"]
+
+    AB --> AF["Your Evolving<br/>LARP Journey"]
+    AC --> AF
+    AD --> AF
+    AE --> AF
+
+    AF --> W
+
+    classDef primary fill:#e4e9ff,stroke:#5368b5,color:#202d60
+    classDef ai fill:#eee3ff,stroke:#8254ba,color:#43246a
+    classDef action fill:#def3e8,stroke:#418b66,color:#174c33
+    classDef decision fill:#fff0d6,stroke:#c18a32,color:#664713
+    classDef future fill:#f0f0f0,stroke:#888,color:#444,stroke-dasharray:5 5
+
+    class A,O,W primary
+    class M,V ai
+    class P,AB,AC,AD,AE,AF action
+    class B,G,Q decision
+    class H,K,L future
